@@ -5,16 +5,15 @@ public class num3047 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int[] intArr = new int[3];
         // 숫자 입력받기
+        int[] intArr = new int[3];
         for (int i = 0; i < 3; i++) {
             intArr[i] = scanner.nextInt();
         }
+        Arrays.sort(intArr);
 
         // 문자열 입력받기
         String str = scanner.next();
-
-        Arrays.sort(intArr);
         for (int i = 0; i < intArr.length; i++) {
             if ('A' == str.charAt(i))
                 System.out.print(intArr[0] + " ");
