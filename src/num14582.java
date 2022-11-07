@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class num14582 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int a[] = new int[9];
+        for(int i=0; i<9; i++)
+            a[i] = scanner.nextInt();
+
+        int b[] = new int[9];
+        for(int i=0; i<9; i++)
+            b[i] = scanner.nextInt();
+
+        int ulim = 0;
+        int stl = 0;
+        for(int i=0; i<9; i++) {
+            ulim += a[i];
+            if(ulim > stl) {
+                System.out.println("Yes");
+                return;
+            }
+            stl += b[i];
+        }
+
+        System.out.println("No");
+    }
+}
